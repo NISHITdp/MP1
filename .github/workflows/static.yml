@@ -34,7 +34,7 @@ jobs:
       #   run: PUBLIC_URL=/mp1 npm run build
 
       - name: Build
-        run: npm run build
+        run: PUBLIC_URL=/${{ github.event.repository.name }} npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
